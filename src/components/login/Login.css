@@ -1,0 +1,68 @@
+.NumLogo{
+   margin-top: 3%;
+}
+.Close{
+    font-size: 3pc;
+    width: 9%;
+    position: absolute;
+    right: 1%;
+    cursor: pointer;
+    font-family: 'Catamaran', sans-serif;
+
+}
+.Login{
+    width: 50%;
+    position: absolute;
+    top: 13pc;
+    background-color: #272727;
+    font-family: 'Catamaran', sans-serif;
+    left: 27%;
+    height: 40pc;
+    border-radius: 8px;
+    border: 1px solid white;
+}
+
+.Lougin{
+    font-weight: bold;
+      font-size: 42px;
+      margin-top: 4%;
+}
+
+.user{
+    font-weight: bold;
+      font-size: 25px;
+      margin-top: 4%;
+      
+}
+
+.InputUser{
+    width: 60%;
+    height: 2pc;
+    color: white;
+    background-color: #272727;
+    border-radius: 8px;
+    border: 1px solid white;
+}
+.CreeCompte{
+    color: #7140DA;
+    font-weight: bold;
+    font-size: 18px;
+    margin-left: -20pc;
+    cursor: pointer;
+}
+.ButtonLougin{
+    border: 3px solid white;
+    background-color: #272727;
+    color: white;
+    padding: 2%;
+    width: 30%;
+    font-weight: bold;
+    font-size: 15px;
+    border-radius: 5px;
+    margin-top: 5%;
+    cursor: pointer;
+}
+.ButtonLougin:hover{
+    color: #272727;
+    background-color: white;
+}
