@@ -3,6 +3,10 @@
     margin: 0;
     color: white;
     font-family: 'Catamaran', sans-serif;
+    position: fixed;
+    width: 100%;
+    z-index: 10;
+    background-color: #272727;
   }
   p{
     margin: 0;
@@ -83,6 +87,7 @@
     justify-content: space-between;
     padding: 2%;
     position: relative;
+
   }
   
   .bottom-line{

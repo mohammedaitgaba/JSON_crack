@@ -6,6 +6,10 @@
   font-family: 'Catamaran', sans-serif;
 }
 
+.body{
+  padding-top: 8%;
+}
+
 
 @media (prefers-reduced-motion: no-preference) {
   .App-logo {
