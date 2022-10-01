@@ -2,8 +2,9 @@ import Links from '../../components/navLinks/links'
 import "./jsonUpload.css"
 import '../../fontawesome/css/all.css';
 import React, { useState } from "react";
+import { Routes, Route, Link } from "react-router-dom";
 
-function JsonUpload() {
+function JsonUpload(props) {
   const [files, setFiles] = useState("");
   const [name, setName] = useState("No File Uploaded");
 
@@ -13,6 +14,7 @@ function JsonUpload() {
     setName(e.target.files[0].name);
     fileReader.onload = e => {
       setFiles(e.target.result);
+      props.onSubmit(e.target.result);
     };
   };
 
@@ -35,9 +37,10 @@ function JsonUpload() {
         <div className="json_file"><pre>{files}</pre></div>
         
       </div>
+      <Link activeStyle={{ color: 'red' }} to="/Crack">
       <div className="json_submit">
         Crack
-      </div>
+      </div></Link>
       </section>
       </div>
       
