@@ -1,0 +1,16 @@
+nav{
+    display: flex;
+    width: 18%;
+    justify-content: space-between;
+    padding: 1% 41%;
+    text-decoration: none;
+}
+a {
+    text-decoration: none;
+    color: white;
+    font-size: 17px;
+    font-weight: 600;
+}
+.isActive{
+    color: blue;
+}
