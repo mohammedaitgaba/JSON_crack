@@ -22,7 +22,7 @@ const Login = ({open,onClose}) =>{
             </p>
         </div>  
         <div> 
-            <p className='Lougin' >Login</p>
+            <p className='Lougin' >Lougin</p>
         </div>
 
         <div>
