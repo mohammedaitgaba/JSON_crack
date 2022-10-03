@@ -47,7 +47,7 @@
     color: #7140DA;
     font-weight: bold;
     font-size: 18px;
-    margin-left: -20pc;
+    margin-left: 30pc;
     cursor: pointer;
 }
 .ButtonLougin{
@@ -60,6 +60,7 @@
     font-size: 15px;
     border-radius: 5px;
     margin-top: 5%;
+    margin-left: 1%;
     cursor: pointer;
 }
 .ButtonLougin:hover{

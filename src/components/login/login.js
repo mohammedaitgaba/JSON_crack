@@ -13,7 +13,6 @@ const Login = ({open,onClose}) =>{
     if(!open ) return null
     return(
         <div className='Login'> 
-         <p className='Close' onClick={onClose} >X</p> 
         
         <div className='NumLogo'>
             <p class="logo">
@@ -35,6 +34,7 @@ const Login = ({open,onClose}) =>{
                 <input className='InputUser' type='Password'></input>
                 <p className='CreeCompte'>Cree un Compte??</p>
             </div>
+            <button className='ButtonLougin' onClick={onClose} >Close</button>
             <button className='ButtonLougin'>Lougin</button>
            
             
