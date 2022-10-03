@@ -1,19 +1,26 @@
+.LoginContainer{
+    position: relative;
+    width: 100vw;
+    height: 100vh;
+    background-color: rgba(0, 0, 0, 0.363);
+    z-index: 10;
+    
+}
+
+
 .NumLogo{
    margin-top: 3%;
 }
-.Close{
-    font-size: 3pc;
-    width: 9%;
+.Close i{
+    font-size: 35px;
     position: absolute;
-    right: 1%;
-    cursor: pointer;
-    font-family: 'Catamaran', sans-serif;
-
+    right: 4%;
+    top: 4%;
 }
 .Login{
     width: 50%;
     position: absolute;
-    top: 13pc;
+    top: 9pc;
     background-color: #272727;
     font-family: 'Catamaran', sans-serif;
     left: 27%;
@@ -47,7 +54,7 @@
     color: #7140DA;
     font-weight: bold;
     font-size: 18px;
-    margin-left: 30pc;
+    margin-left: 25pc;
     cursor: pointer;
 }
 .ButtonLougin{
@@ -66,4 +73,16 @@
 .ButtonLougin:hover{
     color: #272727;
     background-color: white;
+}
+
+.Rougister{
+    width: 50%;
+    position: absolute;
+    top: 9pc;
+    background-color: #272727;
+    font-family: 'Catamaran', sans-serif;
+    left: 27%;
+    height: 40pc;
+    border-radius: 8px;
+    border: 1px solid white;
 }
