@@ -1,10 +1,11 @@
 .App {
-  background-color: #272727;
+  /* background-color: #272727; */
   min-height: 100vh;
   margin: 0;
-  color: white;
+  /* color: white; */
   font-family: 'Catamaran', sans-serif;
   padding-bottom: 2%;
+  
 }
 
 .body{

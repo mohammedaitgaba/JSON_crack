@@ -1,12 +1,12 @@
 .Header {
     text-align: center;
     margin: 0;
-    color: white;
+    /* color: white; */
     font-family: 'Catamaran', sans-serif;
     position: fixed;
     width: 100%;
     z-index: 10;
-    background-color: #272727;
+    /* background-color: #272727; */
   }
   p{
     margin: 0;
@@ -44,7 +44,7 @@
   }
   .btn{
       background: none;
-      color: white;
+      /* color: white; */
       border: solid 2px;
       width: 100%;
       border-radius: 5px;
@@ -68,10 +68,9 @@
     cursor: pointer;
     display: flex;
   }
-  .mode img{
-    width: 100%;
+  .mode i {
+    font-size: 25px;
   }
-  
   .right-header{
     display: flex;
     gap: 30px;
@@ -103,3 +102,4 @@
       height: 20px;
       background: #8f8f8f;
   }
+
