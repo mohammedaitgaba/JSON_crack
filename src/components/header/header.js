@@ -1,23 +1,38 @@
 import coffee from '../../assets/coffee.svg';
-import light from '../../assets/light.svg';
+// import light from '../../assets/light.svg';
 import './header.css';
+import styled ,{ThemeProvider} from "styled-components";
+import {useState} from 'react';
+import { lightTheme,darkTheme,GlobalStyles } from "../../themes.js";
 
-function header(){
+
+function Header({Modeswitcher}){
+  const [theme, setTheme] = useState('light');
+  const Styledapp = styled.div``;
+  const themeToggler = () =>{
+    theme === "light" ? setTheme("dark") :  setTheme("light")
+    Modeswitcher(theme)
+  }
     return (
-        <div className="Header">
+      <ThemeProvider theme={theme === "light" ? lightTheme : darkTheme}>
+        <GlobalStyles/>
+        <Styledapp>
+        <div className="Header" >
           <header className='Header-header'>
             <div className="left-header">
-              <p class="logo">
+              <p class="logo" style={{color : theme ==="light" ? "black" : "white"}}>
                 JSON
                 <span>crack</span>
               </p>
             </div>
             <div className="right-header">
-              <div className='mode'><img src={light}/></div>
-              <div className='separate'></div>
-              <div className='btn-Coffee'><button className='btn'>Buy Me a Coffee<img src={coffee}/></button></div>
-              <div className='separate'></div>
-              <div className='btn-Join'><button className='btn'>Join Us</button></div>
+              <div className='mode' onClick={themeToggler}> 
+                {theme === "light" ?   <i class="fal fa-moon" style={{color : 'black'}} ></i>  :<i  class="fal fa-lightbulb-on" ></i>}
+              </div>
+              <div className='separate' ></div>
+              <div className='btn-Coffee'><button className='btn' style={{color : theme ==="light" ? "black" : "white"}} >Buy Me a Coffee<img src={coffee}/></button></div>
+              <div className='separate' ></div>
+              <div className='btn-Join'><button className='btn' style={{color : theme ==="light" ? "black" : "white"}} >Join Us</button></div>
             </div>
             <div className='bottom-line'></div>
           </header>
@@ -26,7 +41,9 @@ function header(){
             <Route path="about" element={<About />} />
           </Routes> */}
         </div>
+        </Styledapp>
+      </ThemeProvider>
       );
 }
 
-export default header;
+export default Header;
