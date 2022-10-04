@@ -1,13 +1,15 @@
+import React, {useState}  from "react";
 import coffee from '../../assets/coffee.svg';
+import Login from '../login/login';
 // import light from '../../assets/light.svg';
 import './header.css';
 import styled ,{ThemeProvider} from "styled-components";
-import {useState} from 'react';
 import { lightTheme,darkTheme,GlobalStyles } from "../../themes.js";
 
 
 function Header({Modeswitcher}){
   const [theme, setTheme] = useState('light');
+  const [openLogin, setOpenLogin ] = useState(false);
   const Styledapp = styled.div``;
   const themeToggler = () =>{
     theme === "light" ? setTheme("dark") :  setTheme("light")
@@ -32,7 +34,7 @@ function Header({Modeswitcher}){
               <div className='separate' ></div>
               <div className='btn-Coffee'><button className='btn' style={{color : theme ==="light" ? "black" : "white"}} >Buy Me a Coffee<img src={coffee}/></button></div>
               <div className='separate' ></div>
-              <div className='btn-Join'><button className='btn' style={{color : theme ==="light" ? "black" : "white"}} >Join Us</button></div>
+              <div className='btn-Join'><button className='btn' onClick={()=> setOpenLogin(true)} style={{color : theme ==="light" ? "black" : "white"}} >Join Us</button></div>
             </div>
             <div className='bottom-line'></div>
           </header>
@@ -40,6 +42,9 @@ function Header({Modeswitcher}){
             <Route path="/" element={<Home />} />
             <Route path="about" element={<About />} />
           </Routes> */}
+
+          <Login open={openLogin} onClose={()=> setOpenLogin(false)} />
+          
         </div>
         </Styledapp>
       </ThemeProvider>

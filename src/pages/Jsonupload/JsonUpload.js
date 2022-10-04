@@ -15,7 +15,7 @@ function JsonUpload(props) {
     setName(e.target.files[0].name);
     fileReader.onload = e => {
       setFiles(e.target.result);
-      props.onSubmit(e.target.result);
+      props.onSubmit(e.target.result );
     };
   };
 
@@ -29,7 +29,7 @@ function JsonUpload(props) {
         <p>Drag & Drop file here</p>
         <p className="or">Or</p>
         <label for="file_uploader" className="file_uploader">Browse File</label>
-        <input id="file_uploader" type="file" onChange={handleChange} hidden></input>
+        <input id="file_uploader" type="file" onChange={handleChange} accept="application/JSON" hidden></input>
       </div>
 
 

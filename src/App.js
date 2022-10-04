@@ -1,5 +1,6 @@
 import './App.css';
 import  NavBar from './components/header/header';
+
 import { Routes, Route, Link } from "react-router-dom";
 import AllFiles from './pages/AllFiles/AllFiles'
 import JsonUpload from './pages/Jsonupload/JsonUpload'
