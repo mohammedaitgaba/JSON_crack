@@ -62,7 +62,7 @@
   
   .btn:hover{
     background: white;
-    color: #272727;
+    color: #272727 !important;
   }
   .mode{
     cursor: pointer;

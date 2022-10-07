@@ -8,11 +8,15 @@ import { lightTheme,darkTheme,GlobalStyles } from "../../themes.js";
 
 
 function Header({Modeswitcher}){
-  const [theme, setTheme] = useState('light');
+  const [theme, setTheme] = useState(localStorage.getItem("theme"));
+  console.log(theme);
   const [openLogin, setOpenLogin ] = useState(false);
   const Styledapp = styled.div``;
   const themeToggler = () =>{
-    theme === "light" ? setTheme("dark") :  setTheme("light")
+    
+    theme === "light" ? localStorage.setItem("theme","dark") : localStorage.setItem("theme","light")
+    theme === "light" ? setTheme("dark") : setTheme("light") 
+    console.log(theme);
     Modeswitcher(theme)
   }
     return (
