@@ -1,15 +1,62 @@
 import './Login.css';
+// import AllFiles from '../../pages/AllFiles/AllFiles'
+import React, {useEffect, useState}  from "react";
 
-import React, {useState}  from "react";
-import { Routes, Route, Link } from "react-router-dom";
-import Register from '../Register/Register';
-// import Register from '../Register/Register';
+
+
 
 
 const Login = ({open,onClose}) =>{
     const [register,setRegister] = useState(false)
+    const [backendData, setBackendData] = useState([{}])
+    const [username,setUsername] = useState("")
+    const [password,setPassword] = useState("")
     // const [openRegister, setOpenRegister ] = useState(false);
-    
+  
+    const check_user= ()=>{
+        console.log(username,password);
+        // fetch("/api/users/",{
+        //     method: "GET",
+        //     headers: {
+        //         "Content-Type": "application/json"
+        //     },
+            
+        //     body : JSON.stringify({
+        //         username : username,
+        //         password : password
+        //   })
+        //     // .catch(err => console.log(err))
+        // }
+        
+        // ).then(res => res.json())
+        // .then(data=>console.log(data))
+        // let data = {username: username, password: password}
+        fetch("/api/users/"+username).then(
+            response=> response.json()
+          ).then(
+           data=>{
+            setBackendData(data)
+          
+           if(data[0].Password === password) {
+            
+            sessionStorage.setItem("id",data[0].id)
+            onClose();
+            
+           }else{
+            console.log("sir sir");
+           }
+        }
+            )
+
+            
+           
+    }
+  
+
+   
+   
+
+    // <Route path="/AllFiles" element={<AllFiles sendData={backendData}/>} />
     const gotoRegister = ()=>{
         
         setRegister(true)
@@ -73,7 +120,7 @@ const Login = ({open,onClose}) =>{
           
             
             
-    
+            <form  method="GET">
             <div> 
                 <p className='Lougin' >Login</p>
                 
@@ -83,22 +130,22 @@ const Login = ({open,onClose}) =>{
             <div>
                 <div>
                     <p className='user'>UserNAme</p>
-                    <input className='InputUser' type='text'></input>
+                    <input name="fname" className='InputUser' type='text' onChange={e=>setUsername(e.target.value)} value={username} required></input>
                 </div>
                 <div>
                     <p className='user'>Password</p>
-                    <input className='InputUser' type='Password'></input>
-                    <p className='CreeCompte' onClick={gotoRegister}>Cree un Compte??</p>
+                    <input name="password" className='InputUser' type='Password' onChange={a=>setPassword(a.target.value)} value={password} required></input>
+                    <p  className='CreeCompte' onClick={gotoRegister}>Cree un Compte??</p>
                 </div>
                 
-                <button className='ButtonLougin'>Lougin</button>
+                <button type='button' onClick={()=>check_user()} className='ButtonLougin'>Lougin</button>
                
                 
-    
+            
                 
             </div>
             
-            
+            </form>
             
            
             

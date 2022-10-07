@@ -5,7 +5,28 @@ const PORT = process.env.PORT || 5000;
 
 const app = express();
 
-app.get("/api/:userId", (req, res) => {
+app.get("/api/users/:username", (req, res) => {
+ 
+  const mysql = require('mysql')
+  const connection = mysql.createConnection({
+  host: 'localhost',
+  user: 'root',
+  password: '',
+  database: 'json_crack'
+  })
+  connection.connect()
+  connection.query(`SELECT * FROM users WHERE UserName = "${req.params.username}"`, (err, rows) => {
+    if (err) throw err
+    
+      
+  
+    return res.send(rows);
+   
+})
+connection.end()
+});
+
+app.get("/api/files/:userId", (req, res) => {
     const mysql = require('mysql')
     const connection = mysql.createConnection({
     host: 'localhost',
@@ -24,6 +45,8 @@ app.get("/api/:userId", (req, res) => {
 
     connection.end()
   });
+
+  
 
 // app.get('/getData', (req, res) => {
     
