@@ -32,3 +32,33 @@
 .show_crack{
     width: 74%;
 }
+#cracked_container{
+    background-color: #d3d3d338;
+    border-radius: 30px;
+    display: flex;
+    justify-content: center;
+    align-items: center; 
+    padding: 15px;
+    width: max-content;
+}
+  #me{
+    background-color: antiquewhite;
+    border: 1px solid black;
+    border-radius: 10px;
+  }
+  .cont{
+    display: flex;
+  }
+  #test{
+    display: flex;
+  
+  }
+  #test div{
+    display: flex;
+    padding: 20px;
+    justify-content: center;
+    align-items: center;
+  }
+  #test div div{
+    width: max-content;
+  }
