@@ -18,33 +18,33 @@
     top: 4%;
 }
 .Login{
-    width: 50%;
+    width: 40%;
     position: absolute;
-    top: 9pc;
+    top: 5pc;
     background-color: #272727;
     font-family: 'Catamaran', sans-serif;
-    left: 27%;
-    height: 40pc;
+    left: 30%;
+    padding-bottom: 2%;
     border-radius: 8px;
     border: 1px solid white;
 }
 
 .Lougin{
     font-weight: bold;
-      font-size: 42px;
+      font-size: 30px;
       margin-top: 4%;
 }
 
 .user{
     font-weight: bold;
-      font-size: 25px;
+      font-size: 20px;
       margin-top: 4%;
       
 }
 
 .InputUser{
     width: 60%;
-    height: 3pc;
+    height: 35px;
     color: white;
     background-color: #272727;
     border-radius: 8px;
@@ -53,8 +53,10 @@
 .CreeCompte{
     color: #7140DA;
     font-weight: bold;
-    font-size: 18px;
-    margin-left: 25pc;
+    font-size: 15px;
+   width: 20%;
+   margin-left: 18%;
+   
     cursor: pointer;
 }
 .ButtonLougin{
@@ -76,13 +78,13 @@
 }
 
 .Rougister{
-    width: 50%;
+    width: 40%;
     position: absolute;
-    top: 9pc;
+    top: 5pc;
     background-color: #272727;
     font-family: 'Catamaran', sans-serif;
-    left: 27%;
-    height: 40pc;
+    left: 30%;
+    padding-bottom: 2%;
     border-radius: 8px;
     border: 1px solid white;
 }

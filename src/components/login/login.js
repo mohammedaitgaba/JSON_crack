@@ -26,14 +26,6 @@ const Login = ({open,onClose}) =>{
             <div className='Rougister'> 
             <div className='Close'>  <i class="fal fa-times-circle"  onClick={onClose}></i></div>
           
-            
-            
-            <div className='NumLogo'>
-                <p class="logo">
-                JSON
-                 <span>crack</span> 
-                </p>
-            </div>  
             <div> 
                 <p className='Lougin' >Register</p>
                 
@@ -45,11 +37,15 @@ const Login = ({open,onClose}) =>{
                     <p className='user'>UserNAme</p>
                     <input className='InputUser' type='text'></input>
                 </div>
-              
                 <div>
                     <p className='user'>Password</p>
                     <input className='InputUser' type='Password'></input>
-                    <p className='CreeCompte' onClick={gotoLogin}>login</p>
+                </div>
+              
+                <div>
+                    <p className='user'>Confirmer Password</p>
+                    <input className='InputUser' type='Password'></input>
+                    <p className='CreeCompte' onClick={gotoLogin}>Deja Cree le compte</p>
                 </div>
                 
                 <button className='ButtonLougin'>Register</button>
@@ -77,12 +73,7 @@ const Login = ({open,onClose}) =>{
           
             
             
-            <div className='NumLogo'>
-                <p class="logo">
-                JSON
-                 <span>crack</span> 
-                </p>
-            </div>  
+    
             <div> 
                 <p className='Lougin' >Login</p>
                 
