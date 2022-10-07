@@ -1,0 +1,80 @@
+.uploader_container {
+    width: 100%;
+    height: 70vh;
+    padding: 1% 0;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 25px;
+}
+.Json_uploader {
+    padding: 30px 0;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 50%;
+    height: 19vh;
+    background-image: url("data:image/svg+xml,%3csvg width='100%25' height='100%25' xmlns='http://www.w3.org/2000/svg'%3e%3crect width='100%25' height='100%25' fill='none' rx='5' ry='5' stroke='white' stroke-width='4' stroke-dasharray='6%2c 14' stroke-dashoffset='0' stroke-linecap='square'/%3e%3c/svg%3e");
+    border-radius: 5px;
+    gap: 9px;
+    font-weight: bold;
+}
+.Json_uploader i{
+    font-size: 25px;
+}
+
+.or {
+    font-size: 13px;
+}
+.file_uploader{
+    border: 2px solid #7140da;
+    padding: 3px 20px;
+    cursor: pointer;
+    border-radius: 5px;
+    color: #7140da;
+    font-size: 18px;
+    font-weight: 600;
+}
+.show_json{
+    width: 50%;
+}
+.file_destination {
+    background-color: #7140da;
+    color: black;
+    font-weight: 700;
+    border-top-left-radius: 5px;
+    border-top-right-radius: 5px;
+    display: flex;
+    align-items: center;
+    height: 45px;
+    padding-left: 3%;
+}
+.json_file{
+    border: 3px solid #7140da;
+    height: 28vh;
+    border-top: 0;
+    padding: 10px;
+    border-bottom-left-radius: 5px;
+    border-bottom-right-radius: 5px;
+    overflow: auto;
+}
+.json_submit {
+    border: 2px solid white;
+    padding: 0 50px;
+    cursor: pointer;
+    border-radius: 5px;
+    font-weight: 700;
+}
+.json_submit:hover{
+    background-color: white;
+    color: #272727;
+}
+
+*::-webkit-scrollbar, *::-webkit-scrollbar-thumb {
+    width: 9px;
+    background-clip: padding-box;
+    border: 3px solid #272727;
+}
+*::-webkit-scrollbar-thumb {
+    box-shadow: inset 0 0 0 10px;
+}
