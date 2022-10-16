@@ -11,6 +11,7 @@ function Header({Modeswitcher}){
   const [theme, setTheme] = useState(localStorage.getItem("theme"));
   console.log(theme);
   const [openLogin, setOpenLogin ] = useState(false);
+  const [userislogged,setuserislogged]= useState(sessionStorage.getItem("id"))
   const Styledapp = styled.div``;
   const themeToggler = () =>{
     
@@ -38,6 +39,7 @@ function Header({Modeswitcher}){
               <div className='separate' ></div>
               <div className='btn-Coffee'><button className='btn' style={{color : theme ==="light" ? "black" : "white"}} >Buy Me a Coffee<img src={coffee}/></button></div>
               <div className='separate' ></div>
+              
               <div className='btn-Join'><button className='btn' onClick={()=> setOpenLogin(true)} style={{color : theme ==="light" ? "black" : "white"}} >Join Us</button></div>
             </div>
             <div className='bottom-line'></div>
